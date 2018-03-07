@@ -1,2 +1,2 @@
 # kodlar
-Ben Erhan.
+hi im erhan.
