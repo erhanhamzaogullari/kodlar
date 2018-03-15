@@ -1,0 +1,51 @@
+def donem_basi_stok():
+    global stok1  #stok1 değişkenini ortalama stok hesaplamak üzere global yaptım
+    global a      #a,b,c değişkenini dönem sonu stok fonksiyonunda kullanmak üzere global yaptım
+    global b
+    global c
+    a=17
+    b=8
+    c=9
+    stok1=a+b+c
+    print("Dönem başı stok: {} adet koltuk! {} adet yatak! {} adet dolap!".format(a,b,c))
+                                                                                 
+def stok_al_sat():
+    global aa
+    global ab   #alış-satış değişkenlerini dönem sonu fonksiyonunda kullanmak üzere global yaptım
+    global ac
+    global sa
+    global sb
+    global sc
+    #stok alımları
+    aa=10
+    ab=15
+    ac=5
+    #stok satışları
+    sa=25
+    sb=20
+    sc=10
+    print("-"*20,"Stok Alış","-"*20)
+    print("""        {} adet koltuk alınmıştır.
+        {} adet yatak alınmıştır.
+        {} adet dolap alınmıştır.""".format(aa,ab,ac))
+    print("-"*20,"Stok Satış","-"*20)
+    print("""        {} adet koltuk satılmıştır.
+        {} adet yatak satılmıştır.
+        {} adet dolap satılmıştır.""".format(sa,sb,sc))
+    print("-"*52)                                     
+def donem_sonu_stok(a,b,c,aa,ab,ac,sa,sb,sc):
+    global stok2  #stok2 değişkenini ortalama stok hesaplamak üzere global yaptım
+    a=a+aa-sa
+    b=b+ab-sb
+    c=c+ac-sc
+    stok2=a+b+c
+    print("Dönem sonu stok: {} adet koltuk! {} adet yatak! {} adet dolap!".format(a,b,c))
+                                                                                
+donem_basi_stok()
+stok_al_sat()
+donem_sonu_stok(a,b,c,aa,ab,ac,sa,sb,sc)   #global yaptığım a,b,c,aa,ab,ac,sa,sb,sc değişkenlerini burda kulandım
+
+ort_stok=(stok1+stok2)/2   #global yaptığım stok1 ve stok2 değişkenlerini burda kullandım
+print("Yıllık ortalama stok:",round(ort_stok))
+
+    
