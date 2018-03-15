@@ -1,0 +1,29 @@
+def katma_deger_ciro():
+    global kdc  #kdc değişkenini fonksiyon dışında kullanmak üzere global yaptım
+    a=int(input("Lütfen toplam satış miktarını giriniz!:"))
+    b=int(input("Lütfen hammadde maliyetini giriniz!:"))
+    c=int(input("Lütfen bakom onarım giderlerini giriniz!:"))
+    d=int(input("Lütfen sevkiyat giderlerini giriniz!:"))
+    e=int(input("Lütfen satın alınan hizmet giderlerini giriniz!:"))
+    kdc=a-(b+c+d+e)
+    return kdc
+    
+katma_deger_ciro()
+if 1000<kdc:
+    print("""   +++++++++++++++++++++++++++++++++++++++++++++""")
+    print("""   +     İşletme katma değer cirosu yüksek!    +""")
+    print("""   +++++++++++++++++++++++++++++++++++++++++++++""")
+    
+elif 500<kdc<=999:
+    print("""   -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-""")
+    print("""   +     İşletme katma değer cirosu normal!    +""")
+    print("""   -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-""")
+    
+elif kdc<500:
+    print("""   ---------------------------------------------""")
+    print("""   -     İşletme katma değer cirosu düşük!     -""")
+    print("""   ---------------------------------------------""")
+    
+    
+    
+    
