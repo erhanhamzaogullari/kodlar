@@ -1,0 +1,64 @@
+def ilk_6_ay():
+    global igelirler  #igelirler ve igiderler değişkenlerini işletme karı hesaplanırken kullanmak üzere global yaptım.
+    global igiderler
+    print("         ---İlk 6 aylık gelirlerinizi girmelisiniz!---")
+    a=int(input("Lütfen yazılım gelirini giriniz!:"))
+    b=int(input("Lütfen finansman gelirini giriniz!:"))
+    c=int(input("Lütfen ürün satış gelirini giriniz!:"))
+
+    print("         ---İlk 6 aylık giderlerinizi girmelisiniz!---")
+    d=int(input("Lütfen çalışan maaş giderlerini giriniz!:"))
+    e=int(input("Lütfen kira giderlerini giriniz!:"))
+    f=int(input("Lütfen donanım maliyetini giriniz!:"))
+
+    igelirler=a+b+c
+    igiderler=d+e+f
+    print("         ---------------------------------------------")
+    print("                İlk 6 aylık geliriniz: {} TL".format(a+b+c))
+    print("                İlk 6 aylık gideriniz: {} TL".format(d+e+f))
+    print("         ---------------------------------------------")
+def son_6_ay():
+    global sgelirler  #sgelirler ve sgiderler değişkenlerini işletme karı hesaplanırken kullanmak üzere global yaptım
+    global sgiderler
+    print("         ---Son 6 aylık gelirlerinizi girmelisiniz!---")
+    a=int(input("Lütfen yazılım gelirini giriniz!:"))
+    b=int(input("Lütfen sponsorluk gelirini giriniz!:"))
+    c=int(input("Lütfen e-ticaret gelirini giriniz!:"))
+    d=int(input("Lütfen ürün satış gelirini giriniz!:"))
+    
+    print("         ---Son 6 aylık giderlerinizi girmelisiniz!---")
+    e=int(input("Lütfen çalışan maaş giderlerini giriniz!:"))
+    f=int(input("Lütfen kira giderlerini giriniz!:"))
+    g=int(input("Lütfen bakım maliyetini giriniz!:"))
+
+    sgelirler=a+b+c+d
+    sgiderler=e+f+g
+
+    print("         ---------------------------------------------")
+    print("                Son 6 aylık geliriniz: {} TL".format(a+b+c+d))
+    print("                Son 6 aylık gideriniz: {} TL".format(e+f+g))
+    
+    
+
+ilk_6_ay()
+son_6_ay()
+isletme_kar=(igelirler+sgelirler)-(igiderler+sgiderler)  #global yaptığım igelirler,igiderler,sgelirler,sgiderler değişkenleri burda kullandım
+
+if isletme_kar<0:
+    print("""         !!!!!-----------------------------------!!!!!""")
+    print("""                        İşletme zararda.              """)
+    print("""              Lütfen girdilerinizi kontrol ediniz!    """)
+    print("""         !!!!!-----------------------------------!!!!!""")
+elif isletme_kar>=5000:
+    print("""         +++++++++++++++++++++++++++++++++++++++++++++""")
+    print("""                       İşletme çok karlı!             """)
+    print("""         +++++++++++++++++++++++++++++++++++++++++++++""")
+elif 1000<=isletme_kar<5000:
+    print("""         -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-""")
+    print("""                      İşletme karı normal!            """)
+    print("""         -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-""")
+elif isletme_kar<1000:
+    print("""         ---------------------------------------------""")
+    print("""                İşletme yeterince karlı değil!        """)
+    print("""         ---------------------------------------------""")
+    
