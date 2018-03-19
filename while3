@@ -1,0 +1,16 @@
+print("Çıkmak için [0] yazınız.")
+toplam_kalan=0
+while True:
+    girdi=int(input("Lütfen  sayı giriniz:"))
+    if girdi==0:
+        print("Çıkış yaptınız!")
+        break
+    girdi_kalan=girdi%3
+    toplam_kalan=toplam_kalan+girdi%3
+    print("""
+-------------------------------------------------
+    Girdiğiniz sayının 3'e bölümünden kalan:{}
+          Bütün kalanlarınız toplamı(Σ): {}
+-------------------------------------------------
+""".format(girdi_kalan,toplam_kalan))
+    
