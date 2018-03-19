@@ -1,0 +1,15 @@
+ay=0             
+while True:
+    ay=ay+1
+    sm=500+200*ay
+    bsm=20+10*ay
+    ciro=5000+sm*bsm
+    if ciro>500000:
+        yil=round(ay/12)
+        ay=ay%12
+        print("""
+------------------------------------------------------------
+    Cironuz {} yıl {} ay sonra 500.000 TL den fazla olur.
+------------------------------------------------------------
+""".format(yil,ay))
+        break
