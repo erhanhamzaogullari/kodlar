@@ -1,0 +1,10 @@
+print("Çıkmak için [0] yazınız.")
+kalan=0
+while True:
+    girdi=int(input("Lütfen  sayı giriniz:"))
+    kalan=kalan+girdi%3
+    print(kalan)
+    if girdi==0:
+        print("Çıkış yaptınız!")
+        break
+    
