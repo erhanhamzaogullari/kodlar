@@ -1,0 +1,25 @@
+i=0                                                               #gün sayacımı tanımladım
+defo_sayisi=[]                                                    #defo sayılarını toplamak için dizi oluşturdum
+while True:
+    i=i+1                                                         
+    pantolon_gunluk=200                                           #günde sabit üretilen pantolonu tanımladım
+    defo=int(input("Lütfen defolu pantolon sayısını giriniz!:"))  #kullanıcıdan alınacak defolu ürün girdisini tanımladım
+    defo_sayisi.append(defo)                                      #günlük defolu pantolon sayısını döngü dışında oluşturduğum "defo_sayisi" dizisine ekledim 
+    if defo>pantolon_gunluk*0.2:                                  #defolu ürün oranı %20 den fazla olduğunda uyarı vericek
+        print("""
+----------------------!-UYARI-!--------------------
+    Günlük defolu pantolon oranı %20 den fazla!
+----------------------!-UYARI-!--------------------(defolu ürün oranınız:%{})
+""".format(round(defo/pantolon_gunluk*100,2)))
+        break
+
+    else:                                                         #defolu ürün oranı %20 den az ise
+        defo_kumulatif=sum(defo_sayisi)                           #"defo_sayisi" dizimdeki defolu pantolon sayılarını topladım               
+        pantolon_kumulatif=pantolon_gunluk*i                      #toplam üretilen pantolon sayısını buldum
+        print("""                                                       
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<    {} günde toplam {} adet üretilen pantolondan {} tanesi defoludur!  >
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""".format(i,pantolon_kumulatif,defo_kumulatif,i,round(defo/pantolon_gunluk*100,2))) #kaç günde kaç pantolon üretildiğini ve kaçının defolu olduğunu vericek   
+        continue
+        
