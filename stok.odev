@@ -1,0 +1,9 @@
+sm=10000
+ay=0
+while True:
+    sm=sm+(100-500)
+    ay=ay+1
+    if sm==0:
+        print("Stok {}. ayda sıfırlanmıştır!".format(ay))
+    
+    
