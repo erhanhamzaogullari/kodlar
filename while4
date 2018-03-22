@@ -1,16 +1,14 @@
-print("""
-------------------------------------------------------
-   Haftalık mesai saati en az 0 en çok 22 olabilir!
-------------------------------------------------------""")
 calisan_kisi=50
-haftalik_saat=40
 yevmiye=90
 while True:
-    saat=int(input("Lütfen haftalık mesai saatini giriniz!:"))
-    if saat<=22:
-        haftalik_toplam_maas=calisan_kisi*(yevmiye*haftalik_saat+saat*yevmiye*0.1)  #firmanın haftalık mesai saatleri dahil personele ödemesi gereken maaş.
-        aylik_toplam_maas=haftalik_toplam_maas                                      #haftalık maaşı 4 ile çarparak aylık maaş bulundu
-        print("Haftalık {} saat mesai ile aylık personele ödeyecek olduğunuz maaş {} TL'dir.".format(saat,round(aylik_toplam_maas)))
+    aylik_saat=int(input("Lütfen aylık mesai saatini giriniz!:"))
+    if aylik_saat<=22:
+        aylik_toplam_maas=4*(calisan_kisi*(yevmiye*7+aylik_saat*yevmiye*0.1))  #firmanın haftalık mesai saatleri dahil personele ödemesi gereken maaş.
+                                            
+        print("""
+------------------------------------------------------------------------------------
+    Haftalık {} saat mesai ile aylık personele ödeyecek olduğunuz maaş {} TL'dir.
+------------------------------------------------------------------------------------""".format(aylik_saat,round(aylik_toplam_maas)))
         break
     else:
         print("""
