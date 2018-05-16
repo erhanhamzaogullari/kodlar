@@ -1,0 +1,29 @@
+body{
+	background:url("wallpaper.png");
+	background-repeat:no-repeat;
+	background-size:100%;
+	
+	}
+#logo{
+	margin:-8px;
+	padding:0px;
+	width:168px;
+	height:98px;
+	background:url("logo.png");
+	background-repeat:no-repeat;
+}
+#girdi{
+	
+	margin-left:150px;
+	margin-top:160px;
+	padding-right:200px;
+	padding-top:15px;
+	padding-bottom:15px;
+	background-color:#d2b50f;
+}
+#buton{
+	padding:15px;
+	background-color:darkgreen;
+	
+	
+}			
