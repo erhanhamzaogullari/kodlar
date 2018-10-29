@@ -1,2 +1,2 @@
 # kodlar
-hi im erhan.
+Benim adım raşit fazrullah,afganım
